@@ -5,8 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "dev": "node index.js",
-    "install": "npm install"
+    "dev": "node index.js"
   },
   "dependencies": {},
   "devDependencies": {},

@@ -1,6 +1,4 @@
 {
   "snapshot": "snapshot-20250523-d982a01f-3710-40ba-af5b-61333130c429",
-  "terminals": [],
-  "install": "npm install",
-  "start": "node index.js"
+  "terminals": []
 }
