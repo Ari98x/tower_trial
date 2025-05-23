@@ -1,0 +1,16 @@
+{
+  "name": "tower_trial",
+  "version": "1.0.0",
+  "description": "Tower Trial Project",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "node index.js",
+    "install": "npm install"
+  },
+  "dependencies": {},
+  "devDependencies": {},
+  "engines": {
+    "node": ">=20.0.0"
+  }
+}
