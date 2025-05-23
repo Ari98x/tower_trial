@@ -1,15 +1,35 @@
 {
-  "name": "tower_trial",
+  "name": "tower-trials",
   "version": "1.0.0",
-  "description": "Tower Trial Project",
-  "main": "index.js",
+  "description": "Tower Trials - A 2D Roguelike Dungeon Crawler Game",
   "scripts": {
-    "start": "node index.js",
-    "dev": "node index.js"
+    "start": "concurrently \"npm run start:server\" \"npm run start:frontend\"",
+    "start:frontend": "cd frontend && npm start",
+    "start:server": "cd server && npm start",
+    "dev": "concurrently \"npm run dev:server\" \"npm run dev:frontend\"",
+    "dev:frontend": "cd frontend && npm start",
+    "dev:server": "cd server && npm run dev",
+    "build": "cd frontend && npm run build",
+    "install:all": "npm install && cd frontend && npm install && cd ../server && npm install",
+    "clean": "rm -rf frontend/node_modules server/node_modules node_modules",
+    "test": "cd frontend && npm test"
   },
-  "dependencies": {},
+  "dependencies": {
+    "concurrently": "^8.2.0"
+  },
   "devDependencies": {},
   "engines": {
-    "node": ">=20.0.0"
-  }
+    "node": ">=18.0.0"
+  },
+  "keywords": [
+    "game",
+    "roguelike",
+    "dungeon-crawler",
+    "angular",
+    "express",
+    "html5-canvas",
+    "2d-game"
+  ],
+  "author": "Tower Trials Team",
+  "license": "MIT"
 }

@@ -1,0 +1,65 @@
+.ui-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  z-index: 10;
+  padding: 1rem;
+}
+
+.game-panel {
+  @apply bg-gray-800 bg-opacity-90 border border-gray-600 rounded-lg p-4;
+  backdrop-filter: blur(4px);
+  pointer-events: auto;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5);
+}
+
+.hud-panel {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  width: 280px;
+  color: white;
+}
+
+.minimap-container {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+}
+
+.minimap {
+  background: #1a1a2e;
+  border: 1px solid #444;
+  
+  canvas {
+    display: block;
+    width: 100%;
+    height: 100%;
+    image-rendering: pixelated;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: crisp-edges;
+  }
+}
+
+.health-bar {
+  background: linear-gradient(90deg, #ff4444 0%, #ff6666 100%);
+  height: 100%;
+  transition: width 0.3s ease;
+  box-shadow: 0 0 8px rgba(255, 68, 68, 0.5);
+}
+
+.xp-bar {
+  background: linear-gradient(90deg, #44ff44 0%, #66ff66 100%);
+  height: 100%;
+  transition: width 0.3s ease;
+  box-shadow: 0 0 6px rgba(68, 255, 68, 0.5);
+}
+
+.font-pixel {
+  font-family: 'Courier New', monospace;
+  font-weight: bold;
+  text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.8);
+}

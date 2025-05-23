@@ -1,0 +1,65 @@
+<div class="ui-overlay">
+  <!-- Top HUD Panel -->
+  <div class="game-panel hud-panel">
+    <!-- Health Bar -->
+    <div class="mb-3">
+      <div class="flex justify-between items-center mb-1">
+        <span class="text-sm font-pixel text-red-400">HEALTH</span>
+        <span class="text-sm font-pixel">{{ playerHealth }}/{{ playerMaxHealth }}</span>
+      </div>
+      <div class="w-full bg-gray-700 h-4 rounded">
+        <div 
+          class="health-bar rounded" 
+          [style.width.%]="healthPercentage">
+        </div>
+      </div>
+    </div>
+
+    <!-- XP Bar -->
+    <div class="mb-3">
+      <div class="flex justify-between items-center mb-1">
+        <span class="text-sm font-pixel text-green-400">LEVEL {{ playerLevel }}</span>
+        <span class="text-sm font-pixel">{{ playerXP % xpToNextLevel }}/{{ xpToNextLevel }}</span>
+      </div>
+      <div class="w-full bg-gray-700 h-2 rounded">
+        <div 
+          class="xp-bar rounded" 
+          [style.width.%]="xpPercentage">
+        </div>
+      </div>
+    </div>
+
+    <!-- Game Stats -->
+    <div class="grid grid-cols-2 gap-2 text-sm">
+      <div class="text-cyan-400">
+        <div class="font-pixel">FLOOR</div>
+        <div class="text-lg">{{ currentFloor }}</div>
+      </div>
+      <div class="text-cyan-400">
+        <div class="font-pixel">KILLS</div>
+        <div class="text-lg">{{ enemiesKilled }}</div>
+      </div>
+    </div>
+
+    <!-- Time Survived -->
+    <div class="mt-3 text-center">
+      <div class="text-xs font-pixel text-gray-400">TIME SURVIVED</div>
+      <div class="text-lg font-pixel text-yellow-400">{{ timeSurvived }}</div>
+    </div>
+  </div>
+
+  <!-- Minimap -->
+  <div class="minimap-container">
+    <div class="game-panel p-2">
+      <div class="text-xs font-pixel text-cyan-400 mb-2">MAP</div>
+      <div class="minimap w-32 h-32 relative">
+        <canvas 
+          #minimapCanvas 
+          width="128" 
+          height="128"
+          class="w-full h-full">
+        </canvas>
+      </div>
+    </div>
+  </div>
+</div>
